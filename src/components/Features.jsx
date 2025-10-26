@@ -7,8 +7,8 @@ const features = [
     icon: Search,
   },
   {
-    title: "One-click Outreach",
-    description: "Personalized multi-channel sequences that actually get replies — email, LinkedIn, SMS.",
+    title: "One‑click Outreach",
+    description: "Personalized multi‑channel sequences that get replies — email, LinkedIn, SMS.",
     icon: Zap,
   },
   {
@@ -28,7 +28,7 @@ export default function Features() {
     <section id="features" className="bg-white">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-manrope text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="font-manrope text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
             Built for speed and signal
           </h2>
           <p className="mt-4 text-slate-600">
@@ -40,8 +40,9 @@ export default function Features() {
           {features.map((f) => (
             <div
               key={f.title}
-              className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md"
+              className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md"
             >
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-indigo-600/0 via-indigo-600/40 to-violet-600/0 opacity-0 transition group-hover:opacity-100" />
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600">
                 <f.icon className="h-6 w-6" />
               </div>

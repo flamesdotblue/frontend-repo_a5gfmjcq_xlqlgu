@@ -6,25 +6,20 @@ const tiers = [
     price: 29,
     caption: "For solo recruiters getting started",
     cta: "Start free",
-    features: [
-      "1 active job",
-      "200 AI-source credits/mo",
-      "Email outreach",
-      "Basic pipeline"
-    ],
+    features: ["1 active job", "200 AI‑source credits/mo", "Email outreach", "Basic pipeline"],
     highlighted: false,
   },
   {
     name: "Growth",
     price: 79,
     caption: "For growing teams that hire monthly",
-    cta: "Start 14-day trial",
+    cta: "Start 14‑day trial",
     features: [
       "Unlimited jobs",
-      "1,500 AI-source credits/mo",
+      "1,500 AI‑source credits/mo",
       "Email + LinkedIn sequences",
       "Collaboration & scorecards",
-      "Integrations"
+      "Integrations",
     ],
     highlighted: true,
   },
@@ -33,27 +28,24 @@ const tiers = [
     price: 199,
     caption: "For agencies and large talent teams",
     cta: "Talk to sales",
-    features: [
-      "Custom credits & SLAs",
-      "Advanced permissions",
-      "SSO & audit logs",
-      "Premium support"
-    ],
+    features: ["Custom credits & SLAs", "Advanced permissions", "SSO & audit logs", "Premium support"],
     highlighted: false,
   },
 ];
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="bg-slate-50">
-      <div className="mx-auto max-w-7xl px-6 py-20">
+    <section id="pricing" className="relative bg-slate-50">
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        <div className="absolute left-1/2 top-[-5%] h-80 w-80 -translate-x-1/2 rounded-full bg-indigo-200/40 blur-3xl" />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-6 py-20">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-manrope text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="font-manrope text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
             Simple, transparent pricing
           </h2>
-          <p className="mt-4 text-slate-600">
-            Choose a plan that scales with your pipeline. Cancel anytime.
-          </p>
+          <p className="mt-4 text-slate-600">Choose a plan that scales with your pipeline. Cancel anytime.</p>
         </div>
 
         <div className="mt-12 grid gap-6 lg:mt-16 lg:grid-cols-3">
@@ -61,9 +53,7 @@ export default function Pricing() {
             <div
               key={tier.name}
               className={`relative rounded-2xl border bg-white p-6 shadow-sm transition ${
-                tier.highlighted
-                  ? "border-indigo-600 ring-2 ring-indigo-600"
-                  : "border-slate-200 hover:shadow-md"
+                tier.highlighted ? "border-indigo-600 ring-2 ring-indigo-600" : "border-slate-200 hover:shadow-md"
               }`}
             >
               {tier.highlighted && (
@@ -89,7 +79,7 @@ export default function Pricing() {
               </ul>
               <a
                 href="#cta"
-                className={`mt-8 inline-flex w-full items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition ${
+                className={`mt-8 inline-flex w-full items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold transition ${
                   tier.highlighted
                     ? "bg-indigo-600 text-white shadow-lg shadow-indigo-600/20 hover:bg-indigo-700"
                     : "border border-slate-300 bg-white text-slate-900 hover:bg-slate-50"
@@ -100,9 +90,7 @@ export default function Pricing() {
             </div>
           ))}
         </div>
-        <p className="mt-6 text-center text-xs text-slate-500">
-          Save 20% with annual billing. Prices exclude applicable taxes.
-        </p>
+        <p className="mt-6 text-center text-xs text-slate-500">Save 20% with annual billing. Prices exclude applicable taxes.</p>
       </div>
     </section>
   );
